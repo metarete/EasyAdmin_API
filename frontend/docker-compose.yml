@@ -1,0 +1,29 @@
+services:
+  # Apache
+  apache:
+    image: httpd:2.4
+    container_name: ${PROJECT_NAME}_apache
+    ports:
+      - "8081:80"
+    volumes:
+      - ./${PROJECT_DIR}:/var/www/html
+      - ./docker/apache/httpd.conf:/usr/local/apache2/conf/httpd.conf
+    environment:
+      APACHE_DOCUMENT_ROOT: /var/www/html/public
+    depends_on:
+      - php
+  # PHP-FPM
+  php:
+    build:
+      context: ./docker/php
+      dockerfile: Dockerfile
+    container_name: ${PROJECT_NAME}_php
+    volumes:
+      - ./${PROJECT_DIR}:/var/www/html
+    working_dir: /var/www/html
+    environment:
+      - PHP_MEMORY_LIMIT=512M
+
+networks:
+  default:
+    driver: bridge
