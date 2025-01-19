@@ -1,13 +1,14 @@
 
 # EasyAdmin API
 
-> ⚠️ **Warning**: This is a work-in-progress. Be cautious while proceeding!
+> ⚠️ **Warning**: This is a work-in-progress, the project isn't finished yet... Be cautious while proceeding!
 
-EasyAdmin API is a test project to implement a EasyAdmin and Symfony based frontend and a API Platform Symfony backend. 
+EasyAdmin API is a test project to implement an EasyAdmin and Symfony-based frontend and an API Platform Symfony backend.
 
-The backend has a MySQL database and the EA frontend implement CRUD operations via REST API, without a local database.
+The backend uses a MySQL database, and the EA frontend implements CRUD operations via REST API, without a local database.
 
-The EA stuff are based on the great post [Managing Virtual Entities in Symfony’s EasyAdmin Without Doctrine Persistence](https://medium.com/@maurice2k5/managing-virtual-entities-in-symfonys-easyadmin-without-doctrine-persistence-2271c3711c41) by Maurice Bennett 👏 
+The EA stuff are based on the great post [Managing Virtual Entities in Symfony’s EasyAdmin Without Doctrine Persistence](https://medium.com/@maurice2k5/managing-virtual-entities-in-symfonys-easyadmin-without-doctrine-persistence-2271c3711c41) by Maurice Bennett 👏
+
 
 ## Features
 
